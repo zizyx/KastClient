@@ -1,0 +1,11 @@
+.idea/
+build/
+dist/
+*.log
+__pycache__/
+*.pyc
+cefclient
+webcache/
+examples/screenshot.png
+examples/pyinstaller/build/
+examples/pyinstaller/dist/

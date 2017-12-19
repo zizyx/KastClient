@@ -1,0 +1,29 @@
+# Copyright (c) 2012 CEF Python, see the Authors file.
+# All rights reserved. Licensed under BSD 3-clause license.
+# Project website: https://github.com/cztomczak/cefpython
+
+include "compile_time_constants.pxi"
+
+# noinspection PyUnresolvedReferences
+from windows cimport HWND, RECT, HINSTANCE, HCURSOR
+from cef_string cimport CefString
+from libcpp cimport bool as cpp_bool
+
+cdef extern from "include/internal/cef_win.h":
+
+    # noinspection PyUnresolvedReferences
+    ctypedef HWND CefWindowHandle
+    # noinspection PyUnresolvedReferences
+    ctypedef HCURSOR CefCursorHandle
+
+    cdef cppclass CefWindowInfo:
+        void SetAsChild(CefWindowHandle parent,
+                        RECT windowRect)
+        void SetAsPopup(CefWindowHandle parent,
+                        const CefString& windowName)
+        void SetAsWindowless(CefWindowHandle parent,
+                        cpp_bool transparent)
+
+    cdef cppclass CefMainArgs:
+        CefMainArgs()
+        CefMainArgs(HINSTANCE hInstance)

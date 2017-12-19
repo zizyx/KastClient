@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"name" : "Kush",
+		"max_temp": 30,
+		"min_Temp": 20
+	},
+	{
+		"id": 2,
+		"name" : "Cheese",
+		"max_temp": 60,
+		"min_Temp": 10
+	},
+	{
+		"id": 3,
+		"name" : "Haze",
+		"max_temp": 22,
+		"min_Temp": 11
+	}
+]

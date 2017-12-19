@@ -1,0 +1,4 @@
+# If you want to ignore an already commited directory run:
+# git rm --cached -r .idea
+
+compile_time_constants.pxi
